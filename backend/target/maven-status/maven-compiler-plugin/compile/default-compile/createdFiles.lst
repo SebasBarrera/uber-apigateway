@@ -1,0 +1,6 @@
+escuelaing\aygo\api\model\Driver.class
+escuelaing\aygo\api\model\Ride.class
+escuelaing\aygo\api\controller\Uber.class
+escuelaing\aygo\api\repository\RideRepository.class
+escuelaing\aygo\api\repository\DriverRepository.class
+escuelaing\aygo\api\Uber.class
