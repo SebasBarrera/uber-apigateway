@@ -4,19 +4,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * Representa un viaje (Ride) en la aplicación de ride-sharing.
  * Contiene la información sobre el viaje, como origen, destino y estado.
- * Usa Lombok para reducir la cantidad de código repetitivo.
  */
 @Entity
-@Data // Genera automáticamente getters, setters, toString, equals y hashCode.
-@NoArgsConstructor // Genera un constructor sin argumentos.
-@AllArgsConstructor // Genera un constructor con todos los argumentos.
 public class Ride {
 
     /**
@@ -40,4 +33,59 @@ public class Ride {
      * Estado del viaje (por ejemplo, "requested", "in-progress", "completed").
      */
     private String status;
+
+    /**
+     * Constructor sin argumentos.
+     */
+    public Ride() {
+    }
+
+    /**
+     * Constructor con todos los argumentos.
+     *
+     * @param id          Identificador del viaje.
+     * @param origin      Origen del viaje.
+     * @param destination Destino del viaje.
+     * @param status      Estado del viaje.
+     */
+    public Ride(Long id, String origin, String destination, String status) {
+        this.id = id;
+        this.origin = origin;
+        this.destination = destination;
+        this.status = status;
+    }
+
+    // Getters y Setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

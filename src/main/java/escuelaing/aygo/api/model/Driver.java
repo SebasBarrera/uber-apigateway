@@ -1,22 +1,16 @@
 package escuelaing.aygo.api.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
- * Representa un conductor en la aplicación de ride-sharing.
+ * Representa un conductor (Driver) en la aplicación de ride-sharing.
  * Contiene la información del conductor, como nombre y estado.
- * Usa Lombok para simplificar la generación de código repetitivo.
  */
 @Entity
-@Data // Genera automáticamente getters, setters, toString, equals y hashCode.
-@NoArgsConstructor // Genera un constructor sin argumentos.
-@AllArgsConstructor // Genera un constructor con todos los argumentos.
 public class Driver {
 
     /**
@@ -35,4 +29,49 @@ public class Driver {
      * Estado del conductor (por ejemplo, "available", "busy").
      */
     private String status;
+
+    /**
+     * Constructor sin argumentos.
+     */
+    public Driver() {
+    }
+
+    /**
+     * Constructor con todos los argumentos.
+     *
+     * @param id     Identificador del conductor.
+     * @param name   Nombre del conductor.
+     * @param status Estado del conductor.
+     */
+    public Driver(Long id, String name, String status) {
+        this.id = id;
+        this.name = name;
+        this.status = status;
+    }
+
+    // Getters y Setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
