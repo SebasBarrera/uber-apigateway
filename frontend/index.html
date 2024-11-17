@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Ride Sharing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Uber Ride Sharing</h1>
+    <div id="rideForm">
+        <h2>Request a Ride</h2>
+        <input type="text" id="origin" placeholder="Origin">
+        <input type="text" id="destination" placeholder="Destination">
+        <button onclick="requestRide()">Request Ride</button>
+    </div>
+    <div id="rideList">
+        <h2>Available Rides</h2>
+        <ul id="rides"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
